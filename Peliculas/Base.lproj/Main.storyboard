@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Peliculas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lmF-io-J5p">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaPeliculas" rowHeight="80" id="7sy-vC-zDO" customClass="CeldaPeliculaController" customModule="Peliculas" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7sy-vC-zDO" id="ahg-PA-arx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="celdaPelicula" text="Pelicula" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4i-P2-x4U">
+                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nG3-66-c3c">
+                                                    <rect key="frame" x="20" y="47" width="62" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGX-Ab-3WK">
+                                                    <rect key="frame" x="363" y="46" width="31" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="d4i-P2-x4U" firstAttribute="leading" secondItem="ahg-PA-arx" secondAttribute="leadingMargin" id="5Gm-XQ-4aF"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qGX-Ab-3WK" secondAttribute="bottom" constant="2" id="5NE-dX-HAI"/>
+                                                <constraint firstItem="nG3-66-c3c" firstAttribute="top" secondItem="d4i-P2-x4U" secondAttribute="bottom" constant="15" id="Fe2-lL-PEA"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="nG3-66-c3c" secondAttribute="bottom" constant="1" id="HWu-Rr-Q0j"/>
+                                                <constraint firstItem="d4i-P2-x4U" firstAttribute="top" secondItem="ahg-PA-arx" secondAttribute="topMargin" id="Jfp-xg-4bB"/>
+                                                <constraint firstItem="qGX-Ab-3WK" firstAttribute="trailing" secondItem="ahg-PA-arx" secondAttribute="trailingMargin" id="Ora-cP-wPY"/>
+                                                <constraint firstItem="d4i-P2-x4U" firstAttribute="trailing" secondItem="ahg-PA-arx" secondAttribute="trailingMargin" id="PDO-5j-sQn"/>
+                                                <constraint firstItem="qGX-Ab-3WK" firstAttribute="top" secondItem="ahg-PA-arx" secondAttribute="topMargin" constant="35" id="csd-Ja-NkY"/>
+                                                <constraint firstItem="nG3-66-c3c" firstAttribute="leading" secondItem="ahg-PA-arx" secondAttribute="leadingMargin" id="hXp-GY-UH2"/>
+                                                <constraint firstItem="qGX-Ab-3WK" firstAttribute="leading" secondItem="nG3-66-c3c" secondAttribute="trailing" constant="281" id="krw-s0-6T2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblAño" destination="qGX-Ab-3WK" id="dgV-gw-3I0"/>
+                                            <outlet property="lblDirector" destination="nG3-66-c3c" id="qx1-gQ-BUh"/>
+                                            <outlet property="lblPelicula" destination="d4i-P2-x4U" id="VRQ-uE-Nmk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="BRD-SH-Y1b"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="T7Q-nc-XoB"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lmF-io-J5p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IAW-b2-N9W"/>
+                            <constraint firstItem="lmF-io-J5p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="obB-88-Y36"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lmF-io-J5p" secondAttribute="trailing" id="qRs-T0-WwO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lmF-io-J5p" secondAttribute="bottom" id="xru-6g-6cH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
